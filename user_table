@@ -1,0 +1,10 @@
+CREATE TABLE users(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+uName VARCHAR(11) NOT NULL,
+uPass VARCHAR(8) NOT NULL,
+fName VARCHAR(100) NOT NULL,
+lName VARCHAR(100) NOT NULL,
+level enum('admin','normal') NOT NULL default 'normal',
+ploggedin datetime NOT NULL default '0000-00-00 00:00:00', 
+reg_date TIMESTAMP
+)
