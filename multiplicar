@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<HEAD>
-<SCRIPT>
-function multiplicar(){
-m1 = document.getElementById("multiplicando").value;
-m2 = document.getElementById("multiplicador").value;
-r = m1*m2;
-document.getElementById("resultado").value = r;
-}
-</SCRIPT>
-</HEAD>
+<head>
+	<script type="text/javascript">
+		window.onload = function(){
+		    var form = document.forms.formulario;
+		    form.oninput = function() {
+		        form.out.value = form.num.value*'2';
+		    }
+		}
+	</script>
+</head>
 <body>
-<form id="multiplicar">
-  <input type="text" id="multiplicando" value=0 onChange="multiplicar();"> X
-  <input type="text" id="multiplicador" value=0 onChange="multiplicar();"> =
-  <input type="text" id="resultado">
-</form>
+	<form id="formulario">
+	  <input type="number" name="num">
+	  <output name="out"></output>
+	</form>
 </body>
 </html>
